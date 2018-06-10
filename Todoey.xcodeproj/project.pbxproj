@@ -66,7 +66,6 @@
 		6501E20420CD349A008B16E6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6566BE8320CD1AF3007D13ED /* AppDelegate.swift */,
 				6566BE8A20CD1AF4007D13ED /* Assets.xcassets */,
 				6566BE8F20CD1AF4007D13ED /* Info.plist */,
 			);
@@ -92,6 +91,7 @@
 		6566BE8220CD1AF3007D13ED /* Todoey */ = {
 			isa = PBXGroup;
 			children = (
+				6566BE8320CD1AF3007D13ED /* AppDelegate.swift */,
 				6501E20320CD3483008B16E6 /* Controller */,
 				6501E20220CD347E008B16E6 /* View */,
 				6501E20120CD3479008B16E6 /* Model */,
