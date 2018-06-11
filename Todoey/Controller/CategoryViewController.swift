@@ -20,6 +20,7 @@ class CategoryViewController: UITableViewController {
         loadCategories()
     }
     
+    
     //MARK: - Table view data source methods
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +35,22 @@ class CategoryViewController: UITableViewController {
 
         return cell
     }
+    
+    //MARK: - Table view delegate methods
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToItems", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! ToDoListViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destination.selectedCategory = categories[indexPath.row]
+        }
+        
+    }
+    
     
     //MARK: - Data Manipulation Methods
     func saveCategories() {
